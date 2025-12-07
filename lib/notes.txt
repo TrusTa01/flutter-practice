@@ -1,0 +1,235 @@
+// flutter packages pub run build_runner build --delete-conflicting-outputs
+
+-------------------------Layout---------------------------												
+📐 Основные контейнеры
+Container - универсальный контейнер с отступами, размерами, декором
+Padding - только для отступов
+SizedBox - фиксированные размеры или разделитель
+ConstrainedBox - ограничения по размерам
+AspectRatio - сохранение соотношения сторон
+
+📊 Выравнивание и позиционирование
+Align - выравнивание дочернего элемента
+Center - центрирование по горизонтали и вертикали
+Positioned - позиционирование внутри Stack
+FractionallySizedBox - размер в процентах от родителя
+Transform - трансформации (поворот, масштаб, смещение)
+
+🧭 Оси и направления
+Row - горизонтальное расположение
+Column - вертикальное расположение
+Flex - гибкое расположение (база для Row/Column)
+Expanded - заполнение доступного пространства
+Flexible - гибкое пространство
+
+📦 Группировка и поток
+Stack - наложение виджетов друг на друга
+IndexedStack - показывает один из нескольких виджетов
+Wrap - автоматический перенос на новую строку
+Flow - кастомное расположение с делегатом
+Table - табличное расположение
+DataTable - таблица с данными
+
+🖼️ Отображение списков
+ListView - прокручиваемый список
+GridView - сетка элементов
+SingleChildScrollView - прокрутка одного дочернего элемента
+CustomScrollView - кастомная прокрутка с slivers
+ListTile - стандартный элемент списка
+
+🎯 Sliver-виджеты (для CustomScrollView)
+SliverList - список в скролле
+SliverGrid - сетка в скролле
+SliverAppBar - аппбар в скролле
+SliverPadding - отступы в скролле
+SliverToBoxAdapter - обычный виджет в скролле
+
+🛡️ Безопасность и ограничения
+SafeArea - защита от системных областей
+OverflowBox - разрешение выхода за границы
+LimitedBox - ограничение размеров
+FittedBox - подгонка содержимого
+
+🎪 Специальные layout-ы
+Card - карточка с тенью и скруглением
+Chip - тег/метка
+Stepper - шаги процесса
+Divider - разделительная линия
+
+🔄 Наследование и компоновка
+Builder - получение контекста
+LayoutBuilder - получение размеров родителя
+CustomMultiChildLayout - кастомная компоновка нескольких детей
+SingleChildLayout - кастомная компоновка одного ребенка
+
+🏗️ Структурные
+Scaffold - базовая структура экрана Material Design
+MaterialApp - корневой виджет Material Design
+CupertinoApp - корневой виджет iOS-стиля
+
+
+		----------Expanded-----------
+
+
+Expanded - "растягиватель" для Row/Column
+Container - "упаковщик" с decoration
+Expanded оборачивает другой виджет (часто Container), чтобы управлять его размерами
+Expanded говорит: "Занимай всё свободное место!" 🚀
+
+
+			-------Positioned--------
+
+
+Positioned = Absolute positioning
+Positioned можно использовать только внутри Stack.
+
+Stack(
+  children: [
+    Container(color: Colors.grey), // Фон
+    Positioned(
+      top: 20,    // Отступ сверху
+      left: 30,   // Отступ слева
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.red,
+      ),
+    ),
+  ],
+)
+
+		---------SafeArea---------------------
+
+Когда использовать:
+✅ Всегда для основного контента на экране
+✅ Особенно на iOS устройствах с челкой
+✅ В верхней части экрана
+
+Когда не нужно:
+❌ Внутри AppBar (он уже защищен)
+❌ Для фоновых изображений
+
+
+
+		-------Padding------------
+// НЕ ТАК (лишний виджет)
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Container(
+    child: Text('Текст'),
+  ),
+)
+
+// ЛУЧШЕ ТАК
+Container(
+  padding: EdgeInsets.all(16),  // ← встроенный padding
+  child: Text('Текст'),
+)
+
+Когда использовать:
+
+// Text НЕ ИМЕЕТ свойства padding
+Padding(                    // ← единственный способ
+  padding: EdgeInsets.all(16),
+  child: Text('Текст'),     // ← у Text нет padding
+)
+
+// Column/Row НЕ ИМЕЮТ свойства padding  
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Column(            // ← у Column нет padding
+    children: [...],
+  ),
+)
+2. Когда нужно добавить отступы к группе виджетов:
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Column(            // ← отступы у ВСЕЙ группы
+    children: [
+      Text('Заголовок'),
+      Text('Описание'),
+      Button(),
+    ],
+  ),
+)
+
+// vs отступы у КАЖДОГО виджета:
+Column(
+  children: [
+    Container(padding: EdgeInsets.all(16), child: Text('Заголовок')),
+    Container(padding: EdgeInsets.all(16), child: Text('Описание')), 
+    Container(padding: EdgeInsets.all(16), child: Button()),
+    // много повторяющегося кода!
+  ],
+)
+
+
+-----------------------SizedBox------------------------
+
+
+Для фиксированных размеров:
+SizedBox(
+  width: 100,      // точная ширина
+  height: 50,      // точная высота
+  child: Text('Текст'),
+)
+
+Как разделитель (заменитель Margin):
+Column(
+  children: [
+    Text('Первый'),
+    SizedBox(height: 20),    // ← отступ между элементами
+    Text('Второй'),
+    SizedBox(height: 30),    // ← другой отступ
+    Text('Третий'),
+  ],
+)
+
+Для заполнения пространства:
+dart
+SizedBox.expand()    // заполняет всё доступное пространство
+SizedBox.shrink()    // сжимается до минимального размера
+SizedBox - для точных размеров и отступов
+
+
+-----------------------Wrap-------------------
+
+
+Когда Row не помещается:
+dart
+Wrap(
+  spacing: 8,       // расстояние между элементами
+  runSpacing: 12,   // расстояние между строками
+  children: [
+    Chip(label: Text('Тег 1')),
+    Chip(label: Text('Длинный тег 2')),
+    Chip(label: Text('Еще один тег')),
+    Chip(label: Text('Тег 4')),
+    // автоматически переносит на новую строку!
+  ],
+)
+Wrap - для тегов, списка интересов, гибких layout
+
+
+-----------------------Chip--------------------
+
+
+Chip - "Тег/метка"
+return Chip(
+          label: Text(
+            '${index + 20}C',
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
+          avatar: Icon(
+            Icons.wb_cloudy,
+            color: Colors.blue,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+            side: BorderSide(color: Colors.grey.shade100),
+          ),
+          backgroundColor: Colors.grey,
+          );
+Chip - для тегов, категорий, выбранных фильтров
