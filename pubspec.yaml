@@ -1,0 +1,45 @@
+name: flutter_application_default
+description: "Flutter project for my practice"
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.5+1
+  uuid: ^4.5.2
+  http: ^1.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  json_serializable: ^6.11.3
+  build_runner: ^2.10.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/snezha.jpg
+    - assets/images/vladivostok.jpg
+    - assets/icons/moon.png
+    - assets/icons/clock.png
+
+  fonts:
+    - family: "Bitcount Grid Single"
+      fonts:
+        - asset: fonts/BitcountGridSingle.ttf
+
+    - family: "Noto Sans"
+      fonts:
+        - asset: fonts/NotoSansVariableFontwdthwght.ttf
