@@ -130,7 +130,7 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
                   onLongPress: () => _nameController.clear(),
                   child: IconButton(
                     icon: const Icon(Icons.delete_outline, color: Colors.red),
-                    onPressed: () => {_nameController.clear},
+                    onPressed: () => _nameController.clear,
                   ),
                 ),
                 //⁡⁢⁣⁢ Когда поле не сфокусировано ⁡
@@ -157,7 +157,7 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
               validator: (value) => _validatePhoneNumber(value)
                   ? null
                   : 'Phone number must be entered as X(XXX)XXX-XX-XX',
-                  onSaved: (value) => newUser.phone = value!,
+              onSaved: (value) => newUser.phone = value!,
             ),
             SizedBox(height: 10),
             TextFormField(
@@ -267,10 +267,15 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
               validator: _validateConfirmPassword,
             ),
             SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: _submitForm,
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-              child: Text('Submit Form', style: TextStyle(color: Colors.white)),
+            Builder(
+              builder: (context) => ElevatedButton(
+                onPressed: _submitForm,
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                child: Text(
+                  'Submit Form',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),
@@ -278,11 +283,35 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
     );
   }
 
-  // ⁡⁢⁡⁢⁣Вывод данных 
+  // ⁡⁢⁡⁢⁣Вывод данных
+  // void _submitForm() {
+  //   if (_formKey.currentState!.validate()) {
+  //     _formKey.currentState?.save();
+  //     _showDialog(name: _nameController.text );
+  //     print('Form is valid');
+  //     print('Name: ${_nameController.text}');
+  //     print('Phone: ${_phoneController.text}');
+  //     print('Email: ${_emailController.text}');
+  //     print('Country: $_selectedCountry');
+  //     print('Story: ${_storyController.text}');
+  //   } else {
+  //     _showMessage(message: 'Form is not valid! Please review and correct');
+  //   }
+  // }
+
+  // ⁡⁢⁡⁢⁣Вывод данных новый способ без ключа. Но есть один нюанс! Form.of(context) сработает только в том случае, если контекст, который мы передаем, находится внутри виджета Form.
+  // В текущем коде кнопка ElevatedButton находится в том же методе build, что и сама Form, а значит, их контекст - общий (родительский).
+  // Чтобы это заработало, кнопку нужно обернуть в виджет Builder.
+  // Стоит ли так делать?
+  // В случае с формами - нет.
+  // Для форм GlobalKey<FormState> остается золотым стандартом по двум причинам:
+  // Читаемость: сразу видно, какая кнопка какую форму валидирует.
+  // Удобство: тебе не нужно плодить Builder вокруг каждой кнопки.
   void _submitForm() {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState?.save();
-      _showDialog(name: _nameController.text );
+    final form = Form.of(context);
+    if (form.validate()) {
+      form.save();
+      _showDialog(name: _nameController.text);
       print('Form is valid');
       print('Name: ${_nameController.text}');
       print('Phone: ${_phoneController.text}');
@@ -384,13 +413,11 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
               onPressed: () {
                 Navigator.pop(context);
                 Navigator.push(
-                  context, 
+                  context,
                   MaterialPageRoute(
-                    builder: (context) => UserInfoPage(
-                      userInfo: newUser,
-                    ),
-                    ),
-                   );
+                    builder: (context) => UserInfoPage(userInfo: newUser),
+                  ),
+                );
               },
               style: TextButton.styleFrom(
                 foregroundColor: Colors.blue, // цвет текста
@@ -401,7 +428,10 @@ class _RegisterFormPageState extends State<RegisterFormPage> {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: Text('Verified', style: TextStyle(color: Colors.green, fontSize: 18),),
+              child: Text(
+                'Verified',
+                style: TextStyle(color: Colors.green, fontSize: 18),
+              ),
             ),
           ],
         );
