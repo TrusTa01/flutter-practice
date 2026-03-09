@@ -1,5 +1,5 @@
 name: flutter_application_default
-description: "Flutter project for my practice"
+description: "Flutter project for a practice"
 
 publish_to: "none"
 
@@ -31,10 +31,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/snezha.jpg
-    - assets/images/vladivostok.jpg
-    - assets/icons/moon.png
-    - assets/icons/clock.png
+    - assets/images/
+    - assets/icons/
 
   fonts:
     - family: "Bitcount Grid Single"
