@@ -6,7 +6,7 @@ This repository is my personal learning log for mastering Flutter and Dart. To k
 
 Switch between branches to see specific implementations:
 
-- `git checkout topic/provider` — State management using the Provider package
+- `git checkout topic/state-managment` — State management
 
 ## Current Progress:
 
