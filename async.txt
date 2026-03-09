@@ -1,0 +1,25 @@
+Избегайте await в циклах - используйте Future.wait
+
+------------------Когда что использовать-------------------
+
+Future.value()      - Немедленное значение
+Future.delayed()    - Отложенное выполнение  
+Future.microtask()  - Высокий приоритет
+Future.sync()       - Синхронная функция в Future
+
+await               - Ждать без блокировки
+async               - Пометить асинхронную функцию
+
+try/catch           - Обработка ошибок с await
+.catchError()       - Обработка ошибок с then
+
+Future.wait()       - Параллельное выполнение
+Future.any()        - Первый успешный
+Future.forEach()    - Последовательная обработка
+
+------------------Ошибки и их решения-------------------
+
+LateInitializationError - Используйте late final с гарантированной инициализацией
+TimeoutException        - Добавьте .timeout() с fallback
+Stack Overflow          - Избегайте глубокой рекурсии в async
+Memory Leaks            - Отменяйте StreamSubscription и Timer
