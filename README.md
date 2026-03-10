@@ -1,12 +1,28 @@
-# Flutter Learning Journey
+# Flutter & Dart Learning Journey
 
-This repository is my personal learning log for mastering Flutter and Dart. To keep the codebase clean and organized, I have separated each major topic into its own dedicated branch.
+This repository is a structured log of my progress in mastering mobile development. To keep the codebase organized, each topic and project category is separated into its own dedicated branch.
 
-## How to Navigate:
+## Repository Map
 
-Switch between branches to see specific implementations:
+### Flutter
 
-- `git checkout topic/state-managment` — State management
+- `flutter/basics` — Core widgets, layouts, and UI practice.
+- `flutter/features` — Isolated feature tests (e.g., CarouselView, animations).
+- `flutter/small-projects` — Mini-apps (User Form, Contact List, etc.).
+- `topic/state-managment` — State management patterns (Provider, Riverpod, Bloc).
+- `topic/networking` — API integration, Dio, and JSON serialization.
+- `topic/navigation` — Routing systems (Navigator 1.0/2.0, GoRouter).
+- `topic/local-storage` — Persistence (Hive, Shared Preferences, SQLite).
+
+### Dart
+
+- `dart/basics` — Language fundamentals and syntax.
+- `dart/codewars-tasks` — Solutions for algorithmic challenges.
+- `dart/small-projects` — Pure Dart console applications and logic tests.
+
+### Other
+
+- `docs` — Additional documentation and learning resources.
 
 ## Current Progress:
 
@@ -38,3 +54,5 @@ Switch between branches to see specific implementations:
   - [x] **Clean Architecture Principles**: Applied to Domain, Data, and Presentation layers
   - [x] **Server-Driven UI (SDUI)**: Building dynamic layouts via JSON configs
   - [x] **Folder Structure**: Feature-first and Layer-first organization
+
+_How to use: Switch to a specific branch using `git checkout <branch_name>` to explore the code._
