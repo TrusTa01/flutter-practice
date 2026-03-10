@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_default/provider/main.dart';
-import 'package:flutter_application_default/StateManagment/Provider/home_screen.dart';
+import 'package:flutter_application_default/provider/settings_screen.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
