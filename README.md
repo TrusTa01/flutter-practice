@@ -1,7 +1,3 @@
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white)
-
 # Flutter & Dart Learning Journey
 
 This repository is a structured log of my progress in mastering mobile development. To keep the codebase organized, each topic and project category is separated into its own dedicated branch.
@@ -60,3 +56,7 @@ This repository is a structured log of my progress in mastering mobile developme
   - [x] **Folder Structure**: Feature-first and Layer-first organization
 
 _How to use: Switch to a specific branch using `git checkout <branch_name>` to explore the code._
+
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white)
