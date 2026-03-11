@@ -6,8 +6,8 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.10.0 <4.0.0'
-  flutter: '>=3.10.0'
+  sdk: ">=3.10.0 <4.0.0"
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
@@ -33,12 +33,3 @@ flutter:
 
   assets:
     - assets/products/
-
-  fonts:
-    - family: "Bitcount Grid Single"
-      fonts:
-        - asset: fonts/BitcountGridSingle.ttf
-
-    - family: "Noto Sans"
-      fonts:
-        - asset: fonts/NotoSansVariableFontwdthwght.ttf
