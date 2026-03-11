@@ -1,23 +1,22 @@
-# State Management Practice
+# State Management: Provider
 
-This branch serves as a directory for various state management implementations. To avoid dependency conflicts and maintain a clean environment, each approach is isolated in its own sub-branch.
+This branch demonstrates state management and dependency injection using the **Provider** package. It is the most widely recommended approach by the Flutter team for building scalable applications.
 
-## Implementation List
+## Technologies
 
-### 1. [ChangeNotifier / ValueNotifier]
+- **Library:** `provider`
+- **Pattern:** Dependency Injection (DI) & Observer Pattern
 
-- **Description:** Using Flutter's built-in reactive classes to manage state without external packages.
-- **Key Skills:** Listenables, animation-based state, lightweight UI updates, and building custom controllers.
-- **Status:** Done
+## Key Concepts & Implementations
 
-### 2. [Provider / Riverpod]
+- **MultiProvider**: centralized management of multiple data models at the root of the app.
+- **ChangeNotifierProvider**: connecting business logic classes (`ChangeNotifier`) to the widget tree.
+- **ProxyProvider**: managing providers that depend on other providers.
+- **Consumer & Selector**: Ootimizing UI rebuilds by listening to specific data changes.
+- **context.watch vs context.read**: understanding when to rebuild widgets and when to just trigger actions.
 
-- **Description:** Implementing basic data flow using dependency injection and reactive providers.
-- **Key Skills:** ConsumerWidget, Ref, ProviderScope, state modification.
-- **Status:** In progress
+## Features Covered
 
-### 3. [Bloc / Cubit]
-
-- **Description:** Managing complex states using events and streams for better separation of concerns.
-- **Key Skills:** Events, States, BlocListener, BlocBuilder.
-- **Status:** In progress
+- [x] Global and scoped state access.
+- [x] Efficiently handling state updates without `setState`.
+- [x] Using `Selector` for fine-grained performance optimization.
