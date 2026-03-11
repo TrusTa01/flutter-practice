@@ -9,7 +9,11 @@ This repository is a structured log of my progress in mastering mobile developme
 - `flutter/basics` — Core widgets, layouts, and UI practice.
 - `flutter/features` — Isolated feature tests (e.g., CarouselView, animations).
 - `flutter/small-projects` — Mini-apps (User Form, Contact List, etc.).
-- `topic/state-managment` — State management patterns (Provider, Riverpod, Bloc).
+- `topic/state-management` — Directory for state management patterns:
+  - `topic/state-management/native` — InheritedWidget, ChangeNotifier & ValueNotifier.
+  - `topic/state-management/provider` — Industry standard dependency injection.
+  - `topic/state-management/riverpod` — Modern, compile-safe reactive caching.
+  - `topic/state-management/bloc` — Event-driven architecture with BLoC & Cubit.
 - `topic/networking` — API integration, Dio, and JSON serialization.
 - `topic/navigation` — Routing systems (Navigator 1.0/2.0, GoRouter).
 - `topic/local-storage` — Persistence (Hive, Shared Preferences, SQLite).
