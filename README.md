@@ -1,23 +1,33 @@
-# State Management Practice
+# State Management: native flutter tools
 
-This branch serves as a directory for various state management implementations. To avoid dependency conflicts and maintain a clean environment, each approach is isolated in its own sub-branch.
+This branch demonstrates how to manage state and propagate data using only built-in Flutter mechanisms. Mastering these "low-level" tools is essential for understanding how advanced libraries like Provider and Riverpod work under the hood.
 
-## Implementation List
+## Technologies
 
-### 1. [ChangeNotifier / ValueNotifier]
+- **Framework:** Flutter (Zero external dependencies)
+- **Core Mechanisms:** InheritedWidget, ChangeNotifier, ValueNotifier
 
-- **Description:** Using Flutter's built-in reactive classes to manage state without external packages.
-- **Key Skills:** Listenables, animation-based state, lightweight UI updates, and building custom controllers.
-- **Status:** Done
+## What's Inside:
 
-### 2. [Provider / Riverpod]
+### 1. InheritedWidget
 
-- **Description:** Implementing basic data flow using dependency injection and reactive providers.
-- **Key Skills:** ConsumerWidget, Ref, ProviderScope, state modification.
-- **Status:** In progress
+- **Concept:** passing data down the widget tree without "constructor drilling".
+- **Implementation:** custom `of(context)` methods and `updateShouldNotify` logic to optimize rebuilds.
+- **Goal:** understanding the fundamental way Flutter propagates information.
 
-### 3. [Bloc / Cubit]
+### 2. ChangeNotifier & Listenable
 
-- **Description:** Managing complex states using events and streams for better separation of concerns.
-- **Key Skills:** Events, States, BlocListener, BlocBuilder.
-- **Status:** In progress
+- **Concept:** using the Observer pattern to notify the UI about data changes.
+- **Implementation:** creating custom controllers that encapsulate business logic and trigger `notifyListeners()`.
+
+### 3. ValueNotifier & ValueListenableBuilder
+
+- **Concept:** lightweight, granular state updates for specific values.
+- **Implementation:** rebuilding only small parts of the UI (like a search query or a toggle) to maintain high performance.
+
+## Key Skills Demonstrated
+
+- [x] Deep understanding of the **Element Tree** and widget lookup.
+- [x] Efficient memory management (proper use of `dispose`).
+- [x] Building scalable state architectures without third-party packages.
+- [x] Optimizing UI performance by minimizing widget rebuilds.
