@@ -1,23 +1,21 @@
-# State Management Practice
+# State Management: BLoC & Cubit
 
-This branch serves as a directory for various state management implementations. To avoid dependency conflicts and maintain a clean environment, each approach is isolated in its own sub-branch.
+This branch focuses on the **BLoC (Business Logic Component)** pattern, which helps separate the presentation layer from business logic using events and states.
 
-## Implementation List
+## Technologies
 
-### 1. [ChangeNotifier / ValueNotifier]
+- **Library:** `flutter_bloc`
+- **Architecture:** Event-State mapping
 
-- **Description:** Using Flutter's built-in reactive classes to manage state without external packages.
-- **Key Skills:** Listenables, animation-based state, lightweight UI updates, and building custom controllers.
-- **Status:** Done
+## Features & Concepts
 
-### 2. [Provider / Riverpod]
+- **Cubit**: Simple state management for straightforward logic (methods trigger state changes).
+- **BLoC**: Advanced state management using asynchronous events and streams.
+- **BlocBuilder & BlocListener**: Efficient UI updates and side-effect handling (snackbars, navigation).
+- **BlocProvider**: Dependency injection for providing blocs to the widget tree.
 
-- **Description:** Implementing basic data flow using dependency injection and reactive providers.
-- **Key Skills:** ConsumerWidget, Ref, ProviderScope, state modification.
-- **Status:** In progress
+## Key Skills Demonstrated
 
-### 3. [Bloc / Cubit]
-
-- **Description:** Managing complex states using events and streams for better separation of concerns.
-- **Key Skills:** Events, States, BlocListener, BlocBuilder.
-- **Status:** In progress
+- [x] Defining clear `Event` and `State` classes (using `equatable` for value comparison).
+- [x] Managing complex UI states (Loading, Success, Failure).
+- [x] Transforming data streams within the business logic layer.
