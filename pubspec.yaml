@@ -18,6 +18,7 @@ dependencies:
   uuid: ^4.5.2
   http: ^1.6.0
   path_provider: ^2.1.5
+  flutter_riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:
@@ -31,8 +32,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/products/
 
   fonts:
     - family: "Bitcount Grid Single"
