@@ -1,23 +1,15 @@
-# State Management Practice
+# State Management: Riverpod
 
-This branch serves as a directory for various state management implementations. To avoid dependency conflicts and maintain a clean environment, each approach is isolated in its own sub-branch.
+This branch demonstrates state management using **Riverpod** - a reactive caching framework and a complete rewrite of the Provider pattern. It addresses many limitations of the original Provider, such as compile-time safety and dependency on the widget tree.
 
-## Implementation List
+## Technologies
 
-### 1. [ChangeNotifier / ValueNotifier]
+- **Library:** `flutter_riverpod`
+- **Features:** compile-safety, no BuildContext needed for logic, testability
 
-- **Description:** Using Flutter's built-in reactive classes to manage state without external packages.
-- **Key Skills:** Listenables, animation-based state, lightweight UI updates, and building custom controllers.
-- **Status:** Done
+## Key Concepts & Implementations
 
-### 2. [Provider / Riverpod]
-
-- **Description:** Implementing basic data flow using dependency injection and reactive providers.
-- **Key Skills:** ConsumerWidget, Ref, ProviderScope, state modification.
-- **Status:** In progress
-
-### 3. [Bloc / Cubit]
-
-- **Description:** Managing complex states using events and streams for better separation of concerns.
-- **Key Skills:** Events, States, BlocListener, BlocBuilder.
-- **Status:** In progress
+- **ProviderScope**: proper initialization at the root of the application.
+- **ConsumerWidget & ConsumerStatefulWidget**: integrating providers into the UI layer.
+- **AsyncNotifier & FutureProvider**: handling asynchronous data (API calls) with built-in error/loading states.
+- **StateProvider & Notifier**: managing simple and complex state mutations.
