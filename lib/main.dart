@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_default/provider/home_screen.dart';
+import 'package:flutter_application_default/home_screen.dart';
 import 'package:provider/provider.dart';
 
 class Temperature extends ChangeNotifier {
