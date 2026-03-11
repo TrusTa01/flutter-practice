@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_default/screens/home/home_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() {
-  runApp(const ProviderScope(child: MyApp()));
-}
+void main() => runApp(const ProviderScope(child: MyApp()));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,6 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
       ),
+      debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
     );
   }
