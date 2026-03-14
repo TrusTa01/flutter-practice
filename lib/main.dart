@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_default/l10n/gen/app_localizations.dart';
 import 'package:flutter_application_default/screens/app_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_application_default/extensions/context_ext.dart';
 
 void main() => runApp(DemoApp());
 
@@ -26,7 +26,6 @@ class _DemoAppState extends State<DemoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateTitle: (context) => context.l10n.title,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

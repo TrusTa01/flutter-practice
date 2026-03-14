@@ -1,3 +1,47 @@
 {
-  "@@locale": "en"
+  "@@locale": "en",
+  "formatInteger": "Integer: {number}",
+  "@formatInteger": {
+    "description": "Basic integer number format",
+    "placeholders": {
+      "number": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "formatDecimal": "Decimal: {number}",
+  "@formatDecimal": {
+    "description": "Decimal number format with 2 decimal places",
+    "placeholders": {
+      "number": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "formatPercent": "Percent: {number}",
+  "@formatPercent": {
+    "description": "Percent format",
+    "placeholders": {
+      "number": {
+        "type": "double",
+        "format": "percentPattern"
+      }
+    }
+  },
+  "formatCurrency": "Currency: {amount}",
+  "@formatCurrency": {
+    "description": "Currency format",
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "format": "currency"
+      }
+    }
+  },
+  "updateValues": "Update values",
+  "@updateValues": {
+    "description": "Update values button"
+  }
 }

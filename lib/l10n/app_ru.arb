@@ -1,3 +1,47 @@
 {
-  "@@locale": "ru"
+  "@@locale": "ru",
+  "formatInteger": "Целое: {number}",
+  "@formatInteger": {
+    "description": "Формат целого числа",
+    "placeholders": {
+      "number": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "formatDecimal": "Дробное: {number}",
+  "@formatDecimal": {
+    "description": "Формат дробного числа с 2 знаками",
+    "placeholders": {
+      "number": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "formatPercent": "Процент: {number}",
+  "@formatPercent": {
+    "description": "Формат процента",
+    "placeholders": {
+      "number": {
+        "type": "double",
+        "format": "percentPattern"
+      }
+    }
+  },
+  "formatCurrency": "Валюта: {amount}",
+  "@formatCurrency": {
+    "description": "Формат валюты",
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "format": "currency"
+      }
+    }
+  },
+  "updateValues": "Обновить значения",
+  "@updateValues": {
+    "description": "Кнопка для того чтобы обновить значения"
+  }
 }
