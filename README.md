@@ -1,16 +1,13 @@
-# Localization: Text & Strings
+# Flutter Localization (i18n & l10n)
 
-This branch focuses on translating static and dynamic strings using official Flutter tools.
+This directory demonstrates how to implement multi-language support and regional formatting in Flutter applications.
 
-## Key Features
+## Implementation Branches
 
-- **ARB Files**: using Application Resource Bundle files for translations
-- **Plurals & Selectors**: handling "1 item" vs "5 items" logic
-- **Placeholders**: passing variables into translated strings (e.g., "Hello, {name}")
-- **Auto-generation**: using `generate: true` in `pubspec.yaml`
+- **[Text Localization]** — working with `.arb` files and `AppLocalizations`
+- **[Date Formatting]** — regional date and time patterns using the `intl` package
+- **[Currency & Numbers]** — handling symbols, decimal separators, and currency formatting
 
-## Skills Demonstrated
+## Setup Requirements
 
-- [x] Setting up `localizationsDelegates` in `MaterialApp`
-- [x] Switching languages dynamically within the app
-- [x] Organizing keys for large-scale projects
+All branches utilize the official `flutter_localizations` package and the `intl` library
