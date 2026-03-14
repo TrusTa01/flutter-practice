@@ -1,0 +1,53 @@
+{
+  "@@locale": "ru",
+  "nameHint": "Введите ваше имя",
+  "hello": "Привет, {userName}!",
+  "@hello": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "Иван"
+      }
+    }
+  },
+  "send": "Отправить",
+  "title": "Детали пиццы",
+  "pizzaName": "Пицца пеперони",
+  "pizzaIngridients": "Ингридиенты: пеперони, сыр, томатный соус",
+  "orderPizza": "{count, plural, =0{Вы еще не заказывали ни одной пиццы} =1{Вы заказали {count} пиццу} few{Вы заказали {count} пиццы} other{Вы заказали {count} пицц}}",
+  "@orderPizza": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "orderPizzaButton": "{count, plural, =0{Заказать пиццу} =1{В заказе {count} пицца} few{В заказе {count} пиццы} other{В заказе {count} пицц}}",
+  "@orderPizzaButton": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "pizzaSize": "{size, select, mini{Мини} small{Маленький} medium{Средний} large{Большой} superSize{Суперсайз} other{Неизвестный}}",
+  "@pizzaSize": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "pizzaSizeLabel": "Выберете размер пиццы",
+  "selectedSize": "Выбранный размер пиццы - {size}",
+  "@selectedSize": {
+    "placeholders": {
+      "size": {
+        "type": "String",
+        "example": "Средний"
+      }
+    }
+  }
+}
