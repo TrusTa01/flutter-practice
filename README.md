@@ -1,13 +1,12 @@
-# Flutter Localization (i18n & l10n)
+# Localization: Currency & Numbers
 
-This directory demonstrates how to implement multi-language support and regional formatting in Flutter applications.
+Handling financial data and numeric formatting across different regions.
 
-## Implementation Branches
+## Key Concepts
+- **NumberFormat**: proper use of decimal points and thousands separators
+- **Currency Symbols**: automatic placement of symbols ($, €, ₽, etc.) based on locale
+- **Compact Notation**: formatting large numbers (e.g., 1.2M instead of 1,200,000)
 
-- **[Text Localization]** — working with `.arb` files and `AppLocalizations`
-- **[Date Formatting]** — regional date and time patterns using the `intl` package
-- **[Currency & Numbers]** — handling symbols, decimal separators, and currency formatting
-
-## Setup Requirements
-
-All branches utilize the official `flutter_localizations` package and the `intl` library
+## Skills Demonstrated
+- [x] Accurate financial data representation
+- [x] Handling regional numeric input differences
