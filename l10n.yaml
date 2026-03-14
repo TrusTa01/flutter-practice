@@ -1,0 +1,20 @@
+# Папка с ARB-файлами
+arb-dir: lib/l10n
+
+# Шаблон ARB-файла содержащий параметры с описанием строк
+template-arb-file: app_en.arb
+
+# Папка для генерируемых файлов
+output-dir: lib/l10n/gen
+
+# Корневой генерируемый файл локализации который
+# будет использоваться в приложении
+output-localization-file: app_localizations.dart
+
+# Метод доступа к строкам посредством of(context) будет
+# возвращать не-nullable тип (AppLocalizations, а не AppLocalizations?)
+nullable-getter: false
+
+# Если нужны фигурные скобки в ARB-файлах
+# Тогда они долны быть обернуты в '': "Привет! '{Oo}'{userName}!"
+use-escaping: true
