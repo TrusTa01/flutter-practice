@@ -1,3 +1,56 @@
 {
-  "@@locale": "ru"
+  "@@locale": "ru",
+  "title": "Детали пиццы",
+  "@title": {
+    "description": "Заголовок экрана"
+  },
+  "dateFormat1": "Дата: {date}",
+  "@dateFormat1": {
+    "description": "Простой формат даты",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  },
+  "dateFormat2": "Дата: {date}",
+  "@dateFormat2": {
+    "description": "Полный формат даты",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMMd"
+      }
+    }
+  },
+  "timeFormat": "Время: {time}",
+  "@timeFormat": {
+    "description": "Часы и минуты",
+    "placeholders": {
+      "time": {
+        "type": "DateTime",
+        "format": "Hm"
+      }
+    }
+  },
+  "dateTimeFormat": "Дата и время: {dateTime}",
+  "@dateTimeFormat": {
+    "description": "Кастомный формат даты и времени",
+    "placeholders": {
+      "dateTime": {
+        "type": "DateTime",
+        "format": "y/M/d H:mm",
+        "isCustomDateFormat": true
+      }
+    }
+  },
+  "updateDateTimeButton": "Обновить дату и время",
+  "@updateDateTimeButton": {
+    "description": "Кнопка для обновления даты и времени"
+  },
+  "dateNotSelected": "Дата не выбрана",
+  "@dateNotSelected": {
+    "description": "Показывается, когда дата ещё не выбрана"
+  }
 }
