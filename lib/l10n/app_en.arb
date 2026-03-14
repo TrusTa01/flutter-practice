@@ -1,3 +1,56 @@
 {
-  "@@locale": "en"
+  "@@locale": "en",
+  "title": "Pizza Details",
+  "@title": {
+    "description": "Title for the app screen"
+  },
+  "dateFormat1": "Date: {date}",
+  "@dateFormat1": {
+    "description": "Simple date format",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  },
+  "dateFormat2": "Date: {date}",
+  "@dateFormat2": {
+    "description": "Full date format",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMMd"
+      }
+    }
+  },
+  "timeFormat": "Time: {time}",
+  "@timeFormat": {
+    "description": "Hours and minutes",
+    "placeholders": {
+      "time": {
+        "type": "DateTime",
+        "format": "Hm"
+      }
+    }
+  },
+  "dateTimeFormat": "Date and time: {dateTime}",
+  "@dateTimeFormat": {
+    "description": "Combined date and time format",
+    "placeholders": {
+      "dateTime": {
+        "type": "DateTime",
+        "format": "y/M/d H:mm",
+        "isCustomDateFormat": true
+      }
+    }
+  },
+  "updateDateTimeButton": "Update date and time",
+  "@updateDateTimeButton": {
+    "description": "Update date and time button"
+  },
+  "dateNotSelected": "Date not selected",
+  "@dateNotSelected": {
+    "description": "Shown when no date has been selected yet"
+  }
 }

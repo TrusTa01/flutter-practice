@@ -1,13 +1,21 @@
-# Flutter Localization (i18n & l10n)
+# Localization: Date & Time Formatting (ARB-driven)
 
-This directory demonstrates how to implement multi-language support and regional formatting in Flutter applications.
+This branch demonstrates how to format dates and times directly within `.arb` files using **Typed Placeholders**. This approach automates regional formatting, making the UI code cleaner and less error-prone
 
-## Implementation Branches
+## Core Implementation
 
-- **[Text Localization]** — working with `.arb` files and `AppLocalizations`
-- **[Date Formatting]** — regional date and time patterns using the `intl` package
-- **[Currency & Numbers]** — handling symbols, decimal separators, and currency formatting
+Unlike manual formatting, this method uses Flutter's localization generator to handle `DateTime` objects directly in the translation keys
 
-## Setup Requirements
+### Example ARB Pattern:
 
-All branches utilize the official `flutter_localizations` package and the `intl` library
+```json
+"dateFormat": "Date: {date}",
+"@dateFormat": {
+  "placeholders": {
+    "date": {
+      "type": "DateTime",
+      "format": "yMd"
+    }
+  }
+}
+```
