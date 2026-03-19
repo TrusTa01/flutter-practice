@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_default/extensions/context_ext.dart';
 
 class DemoAppScreen extends StatefulWidget {
   final VoidCallback onLocaleToggle;
@@ -12,6 +13,7 @@ class DemoAppScreen extends StatefulWidget {
 class _DemoAppScreenState extends State<DemoAppScreen> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Localization practice'));
+    final l10n = context.l10n;
+    return Center(child: Text(l10n.appTitle));
   }
 }

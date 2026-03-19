@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_default/l10n/gen/app_localizations.dart';
 import 'package:flutter_application_default/screens/app_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_application_default/extensions/context_ext.dart';
@@ -26,14 +27,14 @@ class _DemoAppState extends State<DemoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateTitle: (context) => context.l10n.title,
+      onGenerateTitle: (context) => context.l10n.appTitle,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: const [Locale('en'), Locale('ru')],
+      supportedLocales: AppLocalizations.supportedLocales,
       locale: _locale,
       debugShowCheckedModeBanner: false,
       home: DemoAppScreen(onLocaleToggle: _toggleLocale),

@@ -1,3 +1,7 @@
 {
-  "@@locale": "ru"
+  "@@locale": "ru",
+  "appTitle": "Локализация",
+  "@appTitle": {
+    "description": "Заголовок для этого приложения"
+  }
 }
