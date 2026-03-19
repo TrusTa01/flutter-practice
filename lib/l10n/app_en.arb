@@ -1,3 +1,7 @@
 {
-  "@@locale": "en"
+  "@@locale": "en",
+  "appTitle": "localization",
+  "@appTitle": {
+    "description": "title for this app"
+  }
 }
