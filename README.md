@@ -41,18 +41,23 @@ This repository is a structured log of my progress in mastering mobile developme
   - [x] **ChangeNotifier**: Completed basic reactive patterns
   - [x] **Provider**: MultiProvider, ProxyProvider, and selective rebuilds
   - [x] **ValueNotifier**: Lightweight UI updates using built-in tools
-  - [ ] **Riverpod**: (In Progress) Exploring AsyncNotifier and Providers
+  - [x] **Riverpod**: Completed AsyncNotifier and Providers
+  - [ ] **BLoC/Cubit**: (In Progress) Event-driven and reactive business logic
 - **Networking & API Integration**
   - [x] **HTTP Basics**: Basic requests and status handling
   - [x] **JSON Serialization**: Manual & Code Generation (json_serializable)
-  - [ ] **Dio**: (Planned) Advanced interceptors and network layers
+  - [ ] **Dio**: (In Progress) Advanced interceptors and network layers
 - **Local Data Storage**
-  - [ ] **Shared Preferences**: (In Progress) Storing simple key-value pairs
-  - [ ] **Database**: Deep dive into `Hive` or `Isar` for NoSQL local storage
+  - [x] **Shared Preferences**: Completed key-value persistence
+  - [x] **Secure Storage**: Completed secure key-value persistence
+  - [x] **Drift**: Completed relational local database with ORM
+  - [ ] **sqflite**: Not started yet
+  - [ ] **NoSQL Local Storage**: Not started (`Hive`/`Isar`)
 - **Navigation & Routing**
   - [x] **Navigator 1.0**: Basic imperative routing
-  - [ ] **Navigator 2.0**: Declarative routing for complex flows
-  - [ ] **GoRouter**: Managing deep links and nested navigation
+  - [x] **Navigator 2.0**: Declarative routing for complex flows
+  - [x] **GoRouter**: Managing deep links and nested navigation
+  - [x] **AutoRoute**: Type-safe route generation and guards
 - **Architecture & Best Practices**
   - [x] **SOLID Principles**: Applying Object-Oriented Design for scalable code
   - [x] **Clean Architecture Principles**: Applied to Domain, Data, and Presentation layers
