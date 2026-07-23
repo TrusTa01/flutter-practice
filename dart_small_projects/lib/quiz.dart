@@ -3,20 +3,20 @@ import 'dart:io';
 void main() {
   final List<Map<String, Object>> questions = [
     {
-      'question': 'Почему',
-      'answers': ['Да', 'Нет', 'Возможно'],
+      'question': 'Столица Венгрии',
+      'answers': ['Венеция', 'Мумбаи', 'Будапешт'],
       'correctIndex': 2,
     },
 
     {
-      'question': 'Валорант для добаебов?',
-      'answers': ['Да', 'Нет', 'Воздержусь'],
+      'question': 'Столица Сша',
+      'answers': ['Вашингтон', 'Нью-Йорк', 'Лос-Анжелес'],
       'correctIndex': 0,
     },
 
     {
-      'question': 'Земля круглая?',
-      'answers': ['Что?', 'Да', 'Молоток'],
+      'question': 'Столица Канады',
+      'answers': ['Торонто', 'Оттава', 'Ванкувер'],
       'correctIndex': 1,
     },
   ];
