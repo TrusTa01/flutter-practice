@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'dart:math';
 
-Map<String, List<String>> rules = {
-  'Камень': ['Ножницы'],
-  'Ножницы': ['Бумага'],
-  'Бумага': ['Камень'],
+Map<String, String> rules = {
+  'Камень': 'Ножницы',
+  'Ножницы': 'Бумага',
+  'Бумага': 'Камень',
 };
 
 List<String> choices = ['Камень', 'Ножницы', 'Бумага'];
@@ -52,7 +52,7 @@ void main() {
       print('Выбор компьютера: $computerChoice');
 
       if (rules[userChoiceText]!.contains(computerChoice)) {
-        print(' Победа!');
+        print('Победа!');
         score++;
       } else if (rules[computerChoice]!.contains(userChoiceText)) {
         print('Поражение :(');
