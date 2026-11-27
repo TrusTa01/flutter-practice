@@ -10,7 +10,7 @@
 
 Learning repository · the code lives in the branches, not in `main`
 
-**English** · [Русский](README.ru.md)
+<img src="https://raw.githubusercontent.com/TrusTa01/TrusTa01/main/assets/lang/seg-en-on.svg" alt="English"><a href="README.ru.md"><img src="https://raw.githubusercontent.com/TrusTa01/TrusTa01/main/assets/lang/seg-ru-off.svg" alt="Русский"></a>
 
 </div>
 
