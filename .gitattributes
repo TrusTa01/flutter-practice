@@ -1,0 +1,11 @@
+* text=auto
+
+# Language stats: Flutter platform runners and generated code are not hand-written
+android/** linguist-vendored
+ios/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+windows/** linguist-vendored
+web/** linguist-vendored
+*.g.dart linguist-generated
+*.freezed.dart linguist-generated
